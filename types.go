@@ -16,10 +16,11 @@ type MessageSendResponse struct {
 	} `json:"Results"`
 }
 type MessageWebhookInput struct {
-	RefID   string   `json:"RefId"`
-	From    string   `json:"From"`
-	To      []string `json:"To"`
-	Message string   `json:"Message"`
+	RefID           string   `json:"RefId"`
+	From            string   `json:"From"`
+	To              []string `json:"To"`
+	Message         string   `json:"Message"`
+	DeliveryReceipt bool     `json:"DeliveryReceipt"`
 }
 type MessageSendRequest struct {
 	From      string   `json:"From"`
