@@ -12,7 +12,7 @@ import (
 
 func NewClient(username string, password string) *BulkVS2GoClient {
 	return &BulkVS2GoClient{
-		APIURL:      "https://portal.bulkvs.com/api/v1.0/",
+		APIURL:      "https://portal.bulkvs.com/api/v1.0",
 		APIUsername: username,
 		APIPassword: password,
 	}
