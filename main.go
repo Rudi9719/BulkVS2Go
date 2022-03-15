@@ -57,7 +57,7 @@ func (c *BulkVS2GoClient) GetWebhooks(w string) (*WebhooksResponse, error) {
 func (c *BulkVS2GoClient) postJson(endpoint string, contentType string, body io.Reader, target interface{}) error {
 	client := http.Client{Timeout: 5 * time.Second}
 
-	req, err := http.NewRequest(http.MethodPost, fmt.Sprintf("%+v/%+v", c.APIURL, endpoint), body)
+	req, err := http.NewRequest(http.MethodPost, fmt.Sprintf("%+v%+v", c.APIURL, endpoint), body)
 	if err != nil {
 		return err
 	}
@@ -74,7 +74,7 @@ func (c *BulkVS2GoClient) postJson(endpoint string, contentType string, body io.
 func (c *BulkVS2GoClient) getJson(endpoint string, target interface{}) error {
 	client := http.Client{Timeout: 5 * time.Second}
 
-	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("%+v/%+v", c.APIURL, endpoint), http.NoBody)
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("%+v%+v", c.APIURL, endpoint), http.NoBody)
 	if err != nil {
 		return err
 	}
