@@ -255,18 +255,18 @@ type TNRecordRequest struct {
 }
 
 type GETTNRecordRequest struct {
-	Number string
-	Status string
-	Tier string
+	Number     string
+	Status     string
+	Tier       string
 	TrunkGroup string
 	PortoutPin string
-	Lidb string
-	Class string
-	Sms string
-	Mms string
-	Webhook string
-	Tcr string
-	Limit string
+	Lidb       string
+	Class      string
+	Sms        string
+	Mms        string
+	Webhook    string
+	Tcr        string
+	Limit      string
 }
 
 type TNRecordResponse []struct {
